@@ -55,8 +55,8 @@ INSERT IGNORE INTO Categories (id, name) VALUES
 (4, 'Programming');
 
 INSERT IGNORE INTO Locations (id, name, address, mapsUrl) VALUES 
-(1, 'Central Bookstore', '123 Main St, Cityville', 'https://goo.gl/maps/example1'),
-(2, 'Uptown Branch', '456 North Ave, Uptown', 'https://goo.gl/maps/example2');
+(1, 'Central Bookstore', '123 Main St, Cityville', 'https://maps.app.goo.gl/3wDua9BNEZMrFcfp6'),
+(2, 'Nhà sách ASAVA BOOK', '456 North Ave, Uptown', 'https://maps.app.goo.gl/m8VE5WNZvpzJCaPh6');
 
 INSERT IGNORE INTO Products (id, categoryId, title, author, description, price, rating, image) VALUES 
 (1, 4, 'The Pragmatic Programmer', 'David Thomas, Andrew Hunt', 'Your journey to mastery.', 39.99, 4.8, 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400'),
