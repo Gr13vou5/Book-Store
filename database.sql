@@ -55,7 +55,7 @@ INSERT IGNORE INTO Categories (id, name) VALUES
 (4, 'Programming');
 
 INSERT IGNORE INTO Locations (id, name, address, mapsUrl) VALUES 
-(1, 'Central Bookstore', '123 Main St, Cityville', 'https://maps.app.goo.gl/3wDua9BNEZMrFcfp6'),
+(1, 'Nhà sách anh duy', '123 Main St, Cityville', 'https://maps.app.goo.gl/3wDua9BNEZMrFcfp6'),
 (2, 'Nhà sách ASAVA BOOK', '456 North Ave, Uptown', 'https://maps.app.goo.gl/m8VE5WNZvpzJCaPh6');
 
 INSERT IGNORE INTO Products (id, categoryId, title, author, description, price, rating, image) VALUES 
