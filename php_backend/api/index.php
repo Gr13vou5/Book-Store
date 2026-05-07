@@ -305,23 +305,6 @@ if (preg_match('/^auth\/(.*)$/', $requestPath, $matches) && $method === 'POST') 
             $smtpUser = getenv('MAILTRAP_USER') ?: 'YOUR_MAILTRAP_USER';
             $smtpPass = getenv('MAILTRAP_PASS') ?: 'YOUR_MAILTRAP_PASS';
 
-            $envPath = __DIR__ . '/../../.env';
-            if (file_exists($envPath)) {
-                $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                foreach ($lines as $line) {
-                    if (strpos(trim($line), '#') === 0) continue;
-                    $parts = explode('=', $line, 2);
-                    if (count($parts) === 2) {
-                        $name = trim($parts[0]);
-                        $value = trim(trim($parts[1]), "\"'");
-                        if ($name === 'MAILTRAP_HOST') $smtpHost = $value;
-                        if ($name === 'MAILTRAP_PORT') $smtpPort = $value;
-                        if ($name === 'MAILTRAP_USER') $smtpUser = $value;
-                        if ($name === 'MAILTRAP_PASS') $smtpPass = $value;
-                    }
-                }
-            }
-
             try {
                 $smtpLog = [];
                 $smtpLog[] = "Loaded User: " . substr($smtpUser, 0, 4) . "***";

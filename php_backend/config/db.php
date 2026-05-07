@@ -1,9 +1,11 @@
 <?php
-$host = '127.0.0.1';
-$db = 'online_book_store';
-$user = 'root';
-$pass = ''; // Set your database password here
-$charset = 'utf8mb4';
+require_once __DIR__ . '/env.php';
+
+$host = getenv('DB_HOST') ?: '127.0.0.1';
+$db = getenv('DB_NAME') ?: 'online_book_store';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASS') ?: '';
+$charset = getenv('DB_CHARSET') ?: 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
